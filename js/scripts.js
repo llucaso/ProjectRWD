@@ -15,6 +15,5 @@ $(function() {
     $('#video-'+videoId).css('display', 'block');  
 };
 
-
-
   });
+

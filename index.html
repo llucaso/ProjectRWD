@@ -15,23 +15,30 @@
 	<body>
 		<header>
 			<div class="fullscreen-bg">
-				<video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+				<video id="video-1" loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video Video">
+				<source src="header_1.mp4" type="video/webm">
+				</video>
+				<video id="video-2" loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video Video">
 				<source src="header.mp4" type="video/webm">
 				</video>
 			</div>
-		</header>
 
-		<nav>
-			<a href="#about-me">O mnie</a>
-			<a href="#projects">Projekty</a>
-			<a href="#contact">Kontakt</a>
-		</nav>
+			<nav>
+				<a href="#about-me">O mnie</a>
+				<a href="#projects">Projekty</a>
+				<a href="#contact">Kontakt</a>
+			</nav>
 
-			<div class="wrap">
-  				<a href="#" class="button">O MNIE</a>
-
+			<div class="title">
+				<h1>FRONT-END DEVELOPER</h1>
+				<div class="type" id="typed3"></div>
 			</div>
 
+			<div class="wrap">
+  				<a id="btn-1" href="#" class="button">O MNIE</a>
+			</div>
+
+		</header>
 
 
 	<!-- jQuery CDN -->
@@ -40,5 +47,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!-- MAIN JS -->
 	<script type="text/javascript" src="js/scripts.js"></script>
+	<!-- typed.js -->
+	<script type="text/javascript" src="js/typed.js"></script>
 	</body>
 </html>
