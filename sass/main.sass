@@ -2,73 +2,105 @@
 	margin: 0
 	padding: 0
 
-@import "bourbon/bourbon"
-
-$main-color: #FF9700
-$font-color: #231F20
-$h: #AD6519
-/*JUMBOTRON*/
-header
-	height: 100vh
-	width: 100%
-	z-index: 10000
-	background-color: rgba(173, 101, 25, 0.7)
-
-
-.fullscreen-bg
-	position: relative
-	top: 0
-	right: 0
-	bottom: 0
-	left: 0
-	overflow: hidden
-	z-index: -100
-	height: 100vh
-
-.fullscreen-bg__video 
-	position: absolute
-	top: 0
-	left: 0
-	width: 100%
-	height: 100vh
-
-@media (min-aspect-ratio: 16/9)
-	.fullscreen-bg__video
-		width: 100%
-		height: auto
-		height: 300vh
-		top: -100%
-
-@media (max-aspect-ratio: 16/9)
-	.fullscreen-bg__video
-		width: auto
-		height: 100vh
-		width: 300%
-		left: -100%
-/*NAVIGATION*/
-nav
-	float: right
-	padding: 30px 30px 0 0
-	position: absolute
-	top: 10px
-	right: 30px
-	a
+#menu
+	li
 		display: inline-block
-		margin-left: 20px
-		text-decoration: none!important
-		color: white
-		//color: rgba(0,0,0,0.7)
-		font:
-			family: 'lato'
-			weight: 700
-			size: 14px
-		text-transform: uppercase
+		margin: 10px
+		color: #000
+		background: #fff
+		background: rgba(255, 255, 255, 0.5)
+		-webkit-border-radius: 10px
+		border-radius: 10px
+		&.active
+			background: #666
+			background: rgba(0, 0, 0, 0.5)
+			color: #fff
+		a
+			text-decoration: none
+			color: #000
+
+		&.active a:hover
+			color: #000
 
 		&:hover
-			color: rgba(0,0,0,1)
+			background: rgba(255, 255, 255, 0.8)
+
+		a
+			padding: 9px 18px
+			display: block
+
+		&.active a
+			padding: 9px 18px
+			display: block
+			color: #fff
+
+
+	position: fixed
+	top: 0
+	left: 0
+	height: 40px
+	z-index: 70
+	width: 100%
+	padding: 0
+	margin: 0
+
+#myVideo
+	position: absolute
+	z-index: 4
+	right: 0
+	bottom: 0
+	top: 0
+	right: 0
+	width: 100%
+	height: 100%
+	background-size: 100% 100%
+	background-color: black //in case the video doesn't fit the whole page
+	//background-image: //our video
+	background-position: center center
+	background-size: contain
+	object-fit: cover //cover video background
+
+
+.section1style
+	background-color: rgba(173, 101, 25, 0.7)
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: 100
+	top: 0
+
+.title
+	position: absolute
+	z-index: 100
+	width: 100%
+	display: block
+	top: 20%
+	text-align: center
+	h1
+		text-align: center
+		font:
+			family: 'lato'
+			size: 72px
+			weight: 700
+		color: white
+		text-transform: uppercase
+		letter-spacing: 0.05em
+	.type
+		display: inline-block
+		font:
+			family: 'lato'
+			size: 30px
+			weight: 700
+		color: white
+	.typed-cursor
+		color: white
+		font:
+			size: 30px
+			wight: 700
 
 .wrap
 	position: absolute
+	z-index: 100
 	top: 60%
 	left: 50%
 	margin-top: -86px
@@ -101,31 +133,3 @@ nav
 	a.button:hover
 		color: rgba(255, 255, 255, 0.85)
 		box-shadow: rgba(171, 168, 181, 0.67) 0 0px 0px 60px inset
-
-.title
-	position: absolute
-	width: 100%
-	display: block
-	top: 20%
-	text-align: center
-	h1
-		text-align: center
-		font:
-			family: 'lato'
-			size: 72px
-			weight: 700
-		color: white
-		text-transform: uppercase
-		letter-spacing: 0.05em
-	.type
-		display: inline-block
-		font:
-			family: 'lato'
-			size: 30px
-			weight: 700
-		color: white
-	.typed-cursor
-		color: white
-		font:
-			size: 30px
-			wight: 700

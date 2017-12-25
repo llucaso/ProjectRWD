@@ -1036,7 +1036,7 @@ return /******/ (function(modules) { // webpackBootstrap
 ;
 
 var typed3 = new Typed('#typed3', {
-    strings: ['Tworzę setki linii kodu', 'Tworzę JAVASCRIPT', 'Tworzę z pasją'],
+    strings: ['Tworzę setki linii kodu', 'Tworzę JAVASCRIPT, HTML, CSS', 'Tworzę z pasją'],
     typeSpeed: 100,
     backSpeed: 50,
     smartBackspace: true, // this is a default
