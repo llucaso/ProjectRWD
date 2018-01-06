@@ -2,6 +2,25 @@
 	margin: 0
 	padding: 0
 
+@import "bourbon/bourbon"
+
+=size($size)
+	width: $size
+	height: $size
+
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+
+$main-color: #FF9700
+$font-color: #231F20
+$background: #AD6519
+
+
+
+
 #menu
 	li
 		display: inline-block
@@ -28,6 +47,7 @@
 		a
 			padding: 9px 18px
 			display: block
+			font-family: 'lato'
 
 		&.active a
 			padding: 9px 18px
@@ -71,7 +91,7 @@
 
 .title
 	position: absolute
-	z-index: 100
+	z-index: 1000
 	width: 100%
 	display: block
 	top: 20%
@@ -122,7 +142,7 @@
 		font:
 			family: 'lato'
 			size: 30px
-			weight: 700
+			weight: 900
 
 
 	a.button 
@@ -133,3 +153,185 @@
 	a.button:hover
 		color: rgba(255, 255, 255, 0.85)
 		box-shadow: rgba(171, 168, 181, 0.67) 0 0px 0px 60px inset
+
+//about me
+
+#section2
+	background: url(../new-images/code.jpg) center center no-repeat
+	background-size: cover
+
+.aboutMe
+	font-size: 43px
+	font-weight: 700
+	text-transform: uppercase
+	font-family: 'lato'
+	text-decoration: none
+	color: $font-color
+	text-align: center
+	padding: 24vh 0 30px
+
+.face-lockup
+	max-width: 789px
+	+display(flex)
+	margin: 0 auto
+	align-items: center
+	justify-content: space-between
+	opacity: 0.9
+
+	.face-img
+		+size(200px)
+		order: 3
+		background: url(../new-images/2.png) center center
+		background-size: 200px
+		
+.icon-html
+	order: 1
+	+border-radius(50%)
+	img
+		+size(100px)
+		
+.icon-css
+	order: 2
+	+border-radius(50%)
+	img
+		+size(100px)
+
+.icon-javascript
+	order: 4
+	+border-radius(50%)
+	img
+		+size(100px)
+
+.icon-api
+	order: 5
+	+border-radius(50%)
+	img
+		+size(100px)
+
+p
+	color: $font-color
+
+.blurb
+	max-width: 620px
+	padding: 0 20px
+	margin: 50px auto
+	font-size: 30px
+	font-family: 'Open sans'
+	text-align: center
+	font-weight: 300
+	color: red
+
+@media screen and (max-width: 640px)
+	#menu
+		li
+			a
+				padding: 7px 6px
+
+	.title
+		h1
+			font-size: 51px
+	.wrap
+		top: 83%
+	.aboutMe
+		padding: 22px
+		margin-top: 77px
+	.icon-html, .icon-api, .icon-javascript, .icon-css
+		img
+			+size(65px)
+	.blurb
+		font-size: 20px
+		margin: 10px auto
+		margin-bottom: 50px
+	.face-lockup
+		display: block
+		text-align: center
+		div
+			display: inline-block
+		.face-img
+			display: block
+			background-position: center center
+			background-repeat:  no-repeat
+			width: auto
+			margin-bottom: 30px
+
+		[class^='icon-']
+			margin: 10px
+
+@media screen and (max-width: 600px)
+	#menu
+		display: none
+
+// Projekty
+
+.projekty
+	h1
+		vertical-align: top
+		text-align: center
+		margin-top: 50px
+		font: 
+			family: 'lato'
+			size: 4em
+			weight: 700
+		color: #ebe7db
+
+
+.grid
+	padding: 20px 20px 100px 20px
+	max-width: 1300px
+	margin: 0 auto
+	list-style: none
+	text-align: center
+	li
+		display: inline-block
+		width: 440px
+		margin: 0
+		padding: 20px
+		text-align: left
+		position: relative
+	figure
+		margin: 0
+		position: relative
+		img
+			max-width: 100%
+			display: block
+			position: relative
+	figcaption
+		position: absolute
+		top: 0
+		left: 0
+		padding: 20px
+		background: #2c3f52
+		color: #ed4e6e
+		h3
+			margin: 0
+			padding: 0
+			color: #fff	
+		span
+			&:before
+				content: 'by '
+		a
+			text-align: center
+			padding: 5px 10px
+			border-radius: 2px
+			display: inline-block
+			background: #ed4e6e
+			color: #fff
+@media screen and (max-width: 31.5em)
+	.grid
+		padding: 10px 10px 100px 10px
+		li
+			width: 100%
+			min-width: 300px
+
+.cs-style-1
+	figcaption
+		height: 100%
+		width: 100%
+		opacity: 0
+		text-align: center
+		backface-visibility: hidden
+		transition: transform 0.3s, opacity 0.3s
+
+.no-touch .cs-style-1 figure:hover figcaption, .cs-style-1 figure.cs-hover figcaption
+  opacity: 1
+  transform: translate(15px, 15px)

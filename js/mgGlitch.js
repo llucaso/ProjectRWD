@@ -272,29 +272,28 @@
 
     
 function start() {
-    $(".glitch").mgGlitch({
-        glitch1TimeMin : 300,
-        glitch1TimeMax : 400,
-        glitch2TimeMin : 10,
-        glitch2TimeMax : 115
-        });
+  $(".glitch").mgGlitch({
+  	destroy: false,
+    glitch1TimeMin: 300,
+    glitch1TimeMax: 400,
+    glitch2TimeMin: 10,
+    glitch2TimeMax: 115
+  });
 }
 
-// if ($('#btn-1').mouseenter() === true ) {
-//     console.log('pyk');
-// } else {
-//     console.log('dziala');
-// }
+function stop() {
+  $(".glitch").mgGlitch({
+    destroy: true
+  });
+}
 
 $("#btn-1").hover(
-    function(){
-         start(); {
-            
-        }
-    },
-    function(){
-        $(start()).queue();
-    }
+  function() {
+    start();
+    console.log("działa")
+  },
+  function() {
+    stop(); // Based on the docs, this should stop the plugin
+  }
+);
 
-
-    );

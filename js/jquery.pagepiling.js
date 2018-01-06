@@ -43,7 +43,7 @@
             },
             normalScrollElements: null,
             normalScrollElementTouchThreshold: 5,
-            touchSensitivity: 5,
+            touchSensitivity: 25,
             keyboardScrolling: true,
             sectionSelector: '.section',
             animateAnchor: false,
@@ -979,7 +979,7 @@ $(document).ready(function() {
             $('#pagepiling').pagepiling({
                 menu: '#menu',
                 anchors: ['page1', 'page2', 'page3', 'page4'],
-                sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4'],
+                sectionsColor: ['#bfda00', '#FF9700', '#231F20', '#AD6519'],
                 navigation: {
                     'position': 'right',
                     'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']

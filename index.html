@@ -7,9 +7,11 @@
 		<meta name="author" content="Lukasz Redzinski" />
 		<meta name="description" content="projects showcase" />
 		<meta name="keywords"  content="portfolio, javascript, css, html" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="Resource-type" content="Document" />
 		<!-- FONTS -->
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -20,16 +22,20 @@
 		<!-- MENU -->
 		<ul id = "menu">
 			<li data-menuanchor = "page1" class = "active">
-				<a href = "#page1">Page 1</a>
+				<a href = "#page1">MAIN</a>
 			</li>
 
 			<li data-menuanchor = "page2">
-				<a href = "#page2">Page 2</a>
+				<a href = "#page2">O MNIE</a>
 			</li>
 
 			<li data-menuanchor = "page3">
-				<a href = "#page3">Page 3</a>
+				<a href = "#page3">PROJEKTY</a>
 			</li>
+			<li data-menuanchor = "page4">
+				<a href = "#page4">KONTAKT</a>
+			</li>
+
 		</ul>
 		<!-- SLIDES -->
 		<div id = "pagepiling">
@@ -37,12 +43,9 @@
 
 			<div class = "section" id = "section1">
 				<div class="section1style" id="overlay"></div>
-				<video  class="glitch" autoplay loop muted id = "myVideo">
+				<video  class="glitch video_1" autoplay loop muted id = "myVideo">
 					<source src="header.mp4" type="video/mp4">
 				</video>
-				<!-- <video autoplay loop muted id = "myVideo">
-					<source src="header_1.mp4" type="video/mp4">
-				</video> -->
 				<div class="title">
 					<h1>FRONT-END DEVELOPER</h1>
 					<div class="type" id="typed3"></div>
@@ -55,19 +58,119 @@
 			</div>
 
 
-			<div class = "section" id = "section2">
-				<div class = "intro">
-					<h1>No limits</h1>
-					<p>Anything is possible with Tutorialspoint</p>
+			<div class = "section pp-scrollable" id = "section2">
+				<div class="overlay-code">
+					<h3 id="about-me" class="aboutMe">O mnie</h3>
+
+						<div class="face-lockup">
+
+							<div class="face-img"></div>
+
+							<div class="icon-html foo"><img src="new-images/icons/html.svg" alt="html"></div>
+							<div class="icon-css"><img src="new-images/icons/css.svg" alt="css"></div>
+							<div class="icon-javascript"><img src="new-images/icons/javascript.svg" alt="js"></div>
+							<div class="icon-api"><img src="new-images/icons/api.svg" alt="api"></div>
+							
+						</div>
+
+					<div class="blurb"> 
+						<p><strong>Cześć, mam na imię Łukasz.</strong> Od 6 miesięcy mój wolny czas poświęcam kodowaniu. Codziennie uczę się używania nowych narzędzi. Staram się aby efekty mojej pracy były z dnia na dzień coraz lepsze.<br>Zerknij niżej na kilka moich projektów.</p>
+					</div>
 				</div>
 			</div>
 			
+
+
+
+
+
+
+
+
+
+			<div class = "section pp-scrollable" id = "section3">
+				<div class = "projekty">
+					<h1>PROJEKTY</h1>
+
+
+					<ul class="grid cs-style-1">
+						<li>
+							<figure>
+								<img src="new-images/1.png" alt="img01">
+								<figcaption>
+									<h3>Camera</h3>
+									<span>Jacob Cummings</span>
+									<a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+
+					<ul class="grid cs-style-1">
+						<li>
+							<figure>
+								<img src="new-images/1.png" alt="img01">
+								<figcaption>
+									<h3>Camera</h3>
+									<span>Jacob Cummings</span>
+									<a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+
+					<ul class="grid cs-style-1">
+						<li>
+							<figure>
+								<img src="new-images/1.png" alt="img01">
+								<figcaption>
+									<h3>Camera</h3>
+									<span>Jacob Cummings</span>
+									<a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<div class = "section" id = "section4">
 				<div class = "intro">
 					<h1></h1>
-					<p>Simple Easy Learning</p>
+					<p>new</p>
 				</div>
 			</div>
+
 		</div>
 
 
@@ -95,6 +198,9 @@
 	<script type="text/javascript" src="js/jquery.pagepiling.js"></script>
 	<!-- MAIN JS -->
 	<script type="text/javascript" src="js/scripts.js"></script>
+	<!-- HOVER -->
+	<script type="text/javascript" src="js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="js/toucheffects.js"></script>
 	</body>
 </html>
 
