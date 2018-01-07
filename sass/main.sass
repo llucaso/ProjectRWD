@@ -17,6 +17,7 @@
 $main-color: #FF9700
 $font-color: #231F20
 $background: #AD6519
+$font-color2: #ebe7db
 
 
 
@@ -172,7 +173,7 @@ $background: #AD6519
 
 .face-lockup
 	max-width: 789px
-	+display(flex)
+	display: flex
 	margin: 0 auto
 	align-items: center
 	justify-content: space-between
@@ -221,7 +222,7 @@ p
 	font-weight: 300
 	color: red
 
-@media screen and (max-width: 640px)
+@media screen and (max-width: 768px)
 	#menu
 		li
 			a
@@ -261,6 +262,11 @@ p
 	#menu
 		display: none
 
+	video
+		display: none
+	#section1
+		background: url(../new-images/headerBg.png) no-repeat
+		background-position: 80% center
 // Projekty
 
 .projekty
@@ -283,7 +289,7 @@ p
 	text-align: center
 	li
 		display: inline-block
-		width: 440px
+		//width: 440px
 		margin: 0
 		padding: 20px
 		text-align: left
@@ -300,38 +306,68 @@ p
 		top: 0
 		left: 0
 		padding: 20px
-		background: #2c3f52
-		color: #ed4e6e
+		background: #FF9700
+		color: $font-color2
+		font-family: 'lato'
+		text-transform: uppercase
 		h3
 			margin: 0
 			padding: 0
-			color: #fff	
+			color: $font-color2	
 		span
 			&:before
-				content: 'by '
+				content: ''
 		a
 			text-align: center
 			padding: 5px 10px
 			border-radius: 2px
 			display: inline-block
-			background: #ed4e6e
-			color: #fff
+			background: #231F20
+			color: $font-color2
 @media screen and (max-width: 31.5em)
 	.grid
 		padding: 10px 10px 100px 10px
 		li
 			width: 100%
 			min-width: 300px
+			padding: 0
 
-.cs-style-1
-	figcaption
-		height: 100%
-		width: 100%
-		opacity: 0
-		text-align: center
-		backface-visibility: hidden
-		transition: transform 0.3s, opacity 0.3s
+.cs-style-3 figure
+	overflow: hidden
 
-.no-touch .cs-style-1 figure:hover figcaption, .cs-style-1 figure.cs-hover figcaption
-  opacity: 1
-  transform: translate(15px, 15px)
+.cs-style-3 figure img
+	transition: transform 0.4s
+
+.no-touch .cs-style-3 figure:hover img, .cs-style-3 figure.cs-hover img
+	transform: translateY(-50px)
+
+.cs-style-3 figcaption
+	height: 100px
+	width: 100%
+	top: auto
+	bottom: 0
+	opacity: 0
+	transform: translateY(100%)
+	transition: transform 0.4s, opacity 0.1s 0.3s
+
+.no-touch .cs-style-3 figure:hover figcaption, .cs-style-3 figure.cs-hover figcaption
+	opacity: 1
+	transform: translateY(0px)
+	transition: transform 0.4s, opacity 0.1s
+
+.cs-style-3 figcaption a
+	position: relative
+	bottom: -50px
+	text-decoration: none
+	&:hover
+		color: #FF9700
+.link-1
+	left: -148px
+.link-2
+	left: -135px
+
+@media screen and (max-width: 320px)
+	.link-1
+		left: 0px
+	.link-2
+		left: 0px
