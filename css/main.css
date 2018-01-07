@@ -319,7 +319,8 @@ p {
 .no-touch .cs-style-3 figure:hover figcaption, .cs-style-3 figure.cs-hover figcaption {
   opacity: 1;
   transform: translateY(0px);
-  transition: transform 0.4s, opacity 0.1s; }
+  transition: transform 0.4s, opacity 0.1s;
+  width: 360px; }
 
 .cs-style-3 figcaption a {
   position: relative;
@@ -338,6 +339,13 @@ p {
   .link-1 {
     left: 0px; }
   .link-2 {
-    left: 0px; } }
+    left: 0px; }
+  figcaption {
+    width: 378px !important; } }
+
+@media screen and (max-width: 300px) {
+  .link-2 {
+    z-index: 1000;
+    bottom: -21px !important; } }
 
 /*# sourceMappingURL=main.css.map */
