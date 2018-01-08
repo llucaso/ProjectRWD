@@ -280,15 +280,19 @@ p {
       margin: 0;
       padding: 0;
       color: #ebe7db; }
-    .grid figcaption span:before {
-      content: ''; }
+    .grid figcaption p {
+      margin-top: 5px;
+      font-family: 'lato';
+      text-transform: none; }
     .grid figcaption a {
+      position: initial !important;
       text-align: center;
       padding: 5px 10px;
       border-radius: 2px;
       display: inline-block;
       background: #231F20;
-      color: #ebe7db; }
+      color: #ebe7db;
+      margin: 30px 0px; }
 
 @media screen and (max-width: 31.5em) {
   .grid {
@@ -329,11 +333,8 @@ p {
   .cs-style-3 figcaption a:hover {
     color: #FF9700; }
 
-.link-1 {
-  left: -148px; }
-
 .link-2 {
-  left: -135px; }
+  margin-left: 10px; }
 
 @media screen and (max-width: 320px) {
   .link-1 {
