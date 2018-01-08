@@ -249,7 +249,7 @@ p {
   color: #ebe7db; }
 
 .grid {
-  padding: 20px 20px 100px 20px;
+  padding: 20px 20px 50px 20px;
   max-width: 1300px;
   margin: 0 auto;
   list-style: none;
@@ -296,7 +296,7 @@ p {
 
 @media screen and (max-width: 31.5em) {
   .grid {
-    padding: 10px 10px 100px 10px; }
+    padding: 10px 10px 50px 10px; }
     .grid li {
       width: 100%;
       min-width: 300px;
@@ -348,5 +348,28 @@ p {
   .link-2 {
     z-index: 1000;
     bottom: -21px !important; } }
+
+.social-links {
+  max-width: 700px;
+  margin: 15px auto 50px;
+  display: flex;
+  justify-content: space-around; }
+  .social-links a {
+    display: block;
+    text-decoration: none;
+    background: #FF9700;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 37px;
+    transition: all 0.15s ease-out 0s; }
+    .social-links a:hover {
+      transform: scale(1.4); }
 
 /*# sourceMappingURL=main.css.map */
