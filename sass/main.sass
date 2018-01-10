@@ -405,3 +405,23 @@ p
 
 		&:hover
 			transform: scale(1.4)
+
+
+
+
+// GOOGLE MAPS
+#map
+    height: 100%
+    width: 50%
+    float: right
+
+a
+  &[href^="http://maps.google.com/maps"], &[href^="https://maps.google.com/maps"], &[href^="https://www.google.com/maps"]
+    display: none !important
+
+.gmnoprint:not(.gm-bundled-control)
+  display: none
+
+.gm-bundled-control .gmnoprint
+  display: block
+       
