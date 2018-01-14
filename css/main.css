@@ -14,30 +14,61 @@
   #menu li {
     display: inline-block;
     margin: 10px;
-    color: #000;
-    background: #fff;
-    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
     -webkit-border-radius: 10px;
-    border-radius: 10px; }
-    #menu li.active {
-      background: #666;
-      background: rgba(0, 0, 0, 0.5);
-      color: #fff; }
+    border-radius: 10px;
+    font-weight: 700; }
     #menu li a {
+      padding: 10px;
+      display: block;
+      position: relative;
       text-decoration: none;
-      color: #000; }
-    #menu li.active a:hover {
-      color: #000; }
-    #menu li:hover {
-      background: rgba(255, 255, 255, 0.8); }
-    #menu li a {
-      padding: 9px 18px;
-      display: block;
-      font-family: 'lato'; }
-    #menu li.active a {
-      padding: 9px 18px;
-      display: block;
+      text-transform: uppercase;
+      font-family: 'lato';
+      font-weight: 700;
       color: #fff; }
+      #menu li a:after {
+        content: '';
+        width: 0%;
+        transition: all 0.3s ease;
+        left: 50%; }
+      #menu li a:before {
+        content: '';
+        width: 0%;
+        transition: all 0.3s ease;
+        left: 50%; }
+      #menu li a:hover:after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        background: #FFf;
+        height: 3px;
+        width: 50%; }
+      #menu li a:hover:before {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background: #FFf;
+        height: 3px;
+        width: 50%; }
+    #menu li.active a:after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      background: #FFf;
+      height: 3px;
+      width: 50%; }
+    #menu li.active a:before {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      background: #FFf;
+      height: 3px;
+      width: 50%; }
 
 #myVideo {
   position: absolute;
@@ -385,5 +416,108 @@ a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"],
 
 .gm-bundled-control .gmnoprint {
   display: block; }
+
+.text-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column; }
+  .text-contact h1 {
+    font-family: 'lato';
+    color: #231F20;
+    font-size: 4em; }
+  .text-contact .social-links-contact {
+    display: flex;
+    max-width: 700px;
+    margin: 15px auto 50px; }
+    .text-contact .social-links-contact a {
+      display: block;
+      margin: 30px;
+      text-decoration: none;
+      background: #FF9700;
+      width: 80px;
+      height: 80px;
+      text-align: center;
+      line-height: 80px;
+      color: white;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      font-size: 37px;
+      transition: all 0.15s ease-out 0s; }
+      .text-contact .social-links-contact a:hover {
+        transform: scale(1.4); }
+
+.title-contact {
+  position: absolute;
+  top: 60px;
+  font-size: 4em;
+  font-weight: 700; }
+
+.contact-background {
+  background: linear-gradient(229deg, #ebe7db, #ad6519, #231f20);
+  background-size: 600% 600%;
+  -webkit-animation: contact-background 15s ease infinite;
+  -moz-animation: contact-background 15s ease infinite;
+  -o-animation: contact-background 15s ease infinite;
+  animation: contact-background 15s ease infinite; }
+
+@-webkit-keyframes contact-background {
+  0% {
+    background-position: 84% 0%; }
+  50% {
+    background-position: 17% 100%; }
+  100% {
+    background-position: 84% 0%; } }
+
+@-moz-keyframes contact-background {
+  0% {
+    background-position: 84% 0%; }
+  50% {
+    background-position: 17% 100%; }
+  100% {
+    background-position: 84% 0%; } }
+
+@-o-keyframes contact-background {
+  0% {
+    background-position: 84% 0%; }
+  50% {
+    background-position: 17% 100%; }
+  100% {
+    background-position: 84% 0%; } }
+
+@keyframes contact-background {
+  0% {
+    background-position: 84% 0%; }
+  50% {
+    background-position: 17% 100%; }
+  100% {
+    background-position: 84% 0%; } }
+
+@media screen and (max-width: 780px) {
+  #map {
+    display: none; }
+  .text-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .text-contact h1 {
+      margin-left: 0px; }
+    .text-contact .e-mail {
+      font-size: 30px !important; }
+    .text-contact .social-links-contact a {
+      width: 50px;
+      height: 50px;
+      line-height: 50px; } }
+
+@media screen and (max-width: 1260px) {
+  .text-contact .e-mail {
+    font-size: 50px; } }
+
+@media screen and (max-width: 977px) {
+  .text-contact .e-mail {
+    font-size: 40px; } }
 
 /*# sourceMappingURL=main.css.map */

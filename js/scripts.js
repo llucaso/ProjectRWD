@@ -40,7 +40,7 @@ var styles = [
     "featureType": "landscape",
     "stylers": [
       {
-        "color": "#ad6519"
+        "color": "#FF9700"
       }
     ]
   },
@@ -65,7 +65,7 @@ var styles = [
     "featureType": "poi",
     "stylers": [
       {
-        "color": "#ad6519"
+        "color": "#FF9700"
       }
     ]
   },
@@ -167,7 +167,7 @@ var styles = [
 function initMap() {
         var uluru = {lat: 54.518, lng: 18.531};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 9,
+          zoom: 6,
           center: uluru,
           styles: styles,
           disableDefaultUI: true
