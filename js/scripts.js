@@ -1,3 +1,5 @@
+
+
 // GOOGLE MAPS
 
 var styles = [
@@ -178,4 +180,24 @@ function initMap() {
         });
       }
 
+
+//Glitch effect
+
+$( document ).ready(function() {
+  
+$("#btn-1").hover(
+    function() {
+      console.log('dziala');
+      $('.video-glitch').attr('id', 'myVideo');
+    },
+    function() {
+       $('.video-glitch').removeAttr('id', 'myVideo');
+    }
+);
+
+  
+
+
+  $('body').removeClass('fade-out');
+});
 
